@@ -4,14 +4,6 @@ from uuid import UUID
 from enum import Enum
 
 
-class Attraction(str, Enum):
-  nature = "Nature"
-  food = "Food"
-  culture = "Culture"
-  adventure = "Adventure"
-  history = "History"
-
-
 class DataModel(BaseModel):
   id: Optional[UUID] = None
   first_name: str
