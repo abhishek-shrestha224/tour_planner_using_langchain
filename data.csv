@@ -1,3 +1,4 @@
 id,first_name,last_name,country_of_origin,occupation,main_purpose_of_visit,travel_budget,duration_of_visit,preferred_attractions,number_of_people_travelling,special_activities_interested,transportation_preferences,accommodation_preferences,interested_places,weather_preference,month_of_visit
 7493a47a-4b74-400a-956b-99bd2271a65b,Abhishek,Shrestha,China,Doctor,Bin Chilling,80000.0,90,Landscape,1,Bungee Jumping,Road,Homestay,['Pokhara'],Cold,"['January', 'March']"
 c63b2885-e7ee-4079-a48b-fd55006b82f6,NAme,Name,China,Doctor,Bin Chilling,80000.0,90,Landscape,1,Bungee Jumping,Road,Homestay,['Pokhara'],Cold,"['January', 'March']"
+bead032d-5f43-424b-af99-05baaa414466,New,Name,China,Doctor,Bin Chilling,80000.0,90,Landscape,1,Bungee Jumping,Road,Homestay,['Pokhara'],Cold,"['January', 'March']"

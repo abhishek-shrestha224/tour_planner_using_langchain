@@ -64,3 +64,8 @@ def get_plan(data: DataModel):
 
   except Exception as e:
     raise HTTPException(status_code=500, detail=str(e))
+
+
+if __name__ == "__main__":
+  import uvicorn
+  uvicorn.run(app, host="127.0.0.1", port=8080)
