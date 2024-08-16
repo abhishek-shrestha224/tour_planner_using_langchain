@@ -4,11 +4,10 @@ from data_model import DataModel
 from custom_error import DuplicateError
 from uuid import uuid4
 import csv
-import os
 
 app = FastAPI()
 
-CSV_FILE_PATH = 'data.csv'
+CSV_FILE_PATH = 'user_ data.csv'
 
 
 def save_tasks_to_csv(data: DataModel) -> None:
@@ -49,7 +48,7 @@ def root():
   return {"Hello": "World"}
 
 
-@app.get("/get-my-plan")
+@app.get("/get-iternary")
 def get_plan(data: DataModel):
   data.id = uuid4()
   try:
