@@ -4,6 +4,7 @@ from data_model import DataModel
 from llm import get_itinerary
 from custom_error import DuplicateError
 from uuid import uuid4, UUID
+from fastapi.responses import RedirectResponse
 import csv
 import json
 
@@ -105,7 +106,7 @@ def create_itinerary(data: DataModel):
   try:
     save_user(data)
     itinerary = get_itinerary({
-        "full_name": data.first_name + data.last_name,
+        "full_name": data.first_name + " " + data.last_name,
         "country_of_origin": data.country_of_origin,
         "occupation": data.occupation,
         "main_purpose_of_visit": data.main_purpose_of_visit,
@@ -123,7 +124,7 @@ def create_itinerary(data: DataModel):
         "to_month": data.to_month
     })
     save_itinerary(str(data.id), itinerary)
-    return {"success": True, "plan": itinerary}
+    return RedirectResponse(url=f"/itinerary/{str(data.id)}")
 
   except ValidationError as e:
     raise HTTPException(status_code=400, detail=str(e))
