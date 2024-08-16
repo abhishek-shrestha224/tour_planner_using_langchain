@@ -1,7 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Optional, List
 from uuid import UUID
-from enum import Enum
 
 
 class DataModel(BaseModel):
@@ -13,9 +12,9 @@ class DataModel(BaseModel):
   main_purpose_of_visit: str
   travel_budget: float
   duration_of_visit: int
-  preferred_attractions: Attraction
-  special_activities_interested: Optional[str] = None
+  preferred_attractions: str
   number_of_people_travelling: int
+  special_activities_interested: Optional[str] = None
   transportation_preferences: Optional[str] = None
   accommodation_preferences: Optional[str] = None
   interested_places: Optional[List[str]] = None
