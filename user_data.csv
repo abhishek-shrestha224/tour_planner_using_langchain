@@ -1,0 +1,5 @@
+id,first_name,last_name,country_of_origin,occupation,main_purpose_of_visit,travel_budget,duration_of_visit,food_preferences,preferred_attractions,number_of_people_travelling,special_activities_interested,transportation_preferences,accommodation_preferences,interested_places,weather_preference,from_month,to_month
+
+0770e8fe-ced8-4f7b-86c4-56982efd4c7b,Abhishek,Shrestha,Australia,Motorcycle Racist,Roadtrip,200000.0,20,"momos, dalbhat, chicken curry, roti","Pashupatinath, Swoyambhunath",1,"boating, paragliding, biketrip",motorcycle,cheap hotel,"['Dhampus', 'Mustang', 'Bhedetar', 'Pokhara', 'Chitwan']",moderate,Feb,Feb
+
+a0ed99e2-30bc-41b9-8826-b843b5a84db0,Sohil,Ansari,Australia,Doctor,Mountains,1000000.0,20,"momos, dalbhat, chicken curry, roti","Pashupatinath, Swoyambhunath",1,"boating, paragliding, biketrip",motorcycle,cheap hotel,"['Dhampus', 'Mustang', 'Bhedetar', 'Pokhara', 'Chitwan']",moderate,Feb,Feb

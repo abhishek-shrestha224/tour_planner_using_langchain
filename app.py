@@ -7,13 +7,14 @@ from uuid import uuid4, UUID
 from fastapi.responses import RedirectResponse
 import csv
 import json
+import os
 
 # ! ||--------------------------------------------------------------------------------||
 # ! ||                               Read Write Fuctions                              ||
 # ! ||--------------------------------------------------------------------------------||
 
 ITINERARY_PATH = "itinerary.json"
-USER_PATH = 'user_ data.csv'
+USER_PATH = "user_data.csv"
 
 
 def save_user(data: DataModel) -> None:
@@ -55,7 +56,7 @@ def load_all_itinerary():
       loaded_data = json.load(f)
     return loaded_data
   except FileNotFoundError:
-    raise FileNotFoundError("File not found.")
+    pass
   except json.JSONDecodeError:
     raise ValueError("Error decoding JSON from the file.")
   except KeyError as e:
@@ -69,7 +70,7 @@ def save_itinerary(id, body):
     with open(ITINERARY_PATH, 'w') as f:
       json.dump(list_dict, f, indent=4)
   except FileNotFoundError:
-    raise FileNotFoundError("File not found.")
+    pass
   except json.JSONDecodeError:
     raise ValueError("Error decoding JSON from the file.")
   except KeyError as e:
@@ -85,7 +86,7 @@ def load_itinerary_by_id(id):
     result = loaded_data[id]
     return result
   except FileNotFoundError:
-    raise FileNotFoundError("File not found.")
+    pass
   except json.JSONDecodeError:
     raise ValueError("Error decoding JSON from the file.")
   except KeyError as e:
@@ -100,7 +101,7 @@ def root():
   return {"Hello": "World"}
 
 
-@app.post("/iternary/create")
+@app.post("/itinerary/create")
 def create_itinerary(data: DataModel):
   data.id = uuid4()
   try:
@@ -124,8 +125,10 @@ def create_itinerary(data: DataModel):
         "to_month": data.to_month
     })
     save_itinerary(str(data.id), itinerary)
-    return RedirectResponse(url=f"/itinerary/{str(data.id)}")
-
+    return {"sucess": True, "it-id": str(data.id), "plan": itinerary}
+    # return RedirectResponse(url=f"/itinerary/{str(data.id)}")
+  except FileNotFoundError as e:
+    raise HTTPException(status_code=404, detail=str(e))
   except ValidationError as e:
     raise HTTPException(status_code=400, detail=str(e))
 

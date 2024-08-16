@@ -1,34 +1,250 @@
 {
-    "b1325d49-c766-4e1a-a524-d4aed83e3ab1": [
+    "0770e8fe-ced8-4f7b-86c4-56982efd4c7b": [
         {
-            "Day 1: Arrival in Kathmandu": "Check into a cozy homestay and explore Thamel for dinner, trying local momo."
+            "Day 1: Arrival in Kathmandu": "Settle into a cheap hotel. Visit Pashupatinath and experience local cuisine like momos."
         },
         {
-            "Day 2: Kathmandu Sightseeing": "Visit Pashupatinath Temple, Boudhanath Stupa, and Swayambhunath. Enjoy dinner at a local momo restaurant."
+            "Day 2: Explore Swoyambhunath": "Visit Swoyambhunath (Monkey Temple). Enjoy dalbhat for lunch. Evening walk around Thamel."
         },
         {
-            "Day 3: Travel to Pokhara": "Take a bus to Pokhara. Upon arrival, check into a homestay and stroll along Phewa Lake. Try some momo for dinner."
+            "Day 3: Ride to Dhampus": "Motorcycle journey to Dhampus. Stay in a budget guesthouse. Enjoy the mountain views."
         },
         {
-            "Day 4: Pokhara Activities": "Morning visit to Sarangkot for sunrise views. Afternoon boating on Phewa Lake. Evening momo at a lakeside restaurant."
+            "Day 4: Hike in Dhampus": "Morning hike. Explore local villages. Savor traditional Nepali food like chicken curry."
         },
         {
-            "Day 5: Pokhara Adventure": "Go rafting in the Seti River. Relax in the evening at your homestay with a momo dinner."
+            "Day 5: Travel to Pokhara": "Motorcycle to Pokhara. Check into a cheap hotel. Evening lakeside walk and local dinner."
         },
         {
-            "Day 6: Travel to Chitwan": "Take a bus to Chitwan. Check into a homestay and enjoy a traditional Tharu cultural program with momo dinner."
+            "Day 6: Boating in Phewa Lake": "Morning boat ride on Phewa Lake. Visit Barahi Temple. Explore Pokhara's lakeside cafes."
         },
         {
-            "Day 7: Chitwan National Park": "Full-day jungle safari in Chitwan National Park. Return to your homestay for a delicious momo dinner."
+            "Day 7: Paragliding Adventure": "Morning paragliding. Afternoon visit to Davis Fall and Gupteshwor Cave."
         },
         {
-            "Day 8: Travel to Mustang": "Bus journey to Mustang. Check into a homestay and explore the local area. Dinner featuring momo."
+            "Day 8: Rest Day in Pokhara": "Relax by the lake, visit local shops, and enjoy a leisurely day with dalbhat."
         },
         {
-            "Day 9: Explore Mustang": "Visit Muktinath Temple and Kagbeni. Enjoy local momo for dinner."
+            "Day 9: Ride to Chitwan": "Motorcycle journey to Chitwan. Check into a budget hotel. Evening jungle walk."
         },
         {
-            "Day 10: Return to Kathmandu": "Bus back to Kathmandu. Last-minute shopping and momo feast in Thamel. Overnight at a homestay."
+            "Day 10: Chitwan Safari": "Full-day jungle safari. Spot wildlife and enjoy traditional Tharu dance in the evening."
+        },
+        {
+            "Day 11: Ride to Mustang": "Begin your motorcycle journey to Mustang. Stay at a budget-friendly guesthouse."
+        },
+        {
+            "Day 12: Explore Mustang": "Explore Mustang's unique landscapes. Visit local monasteries and enjoy traditional Nepali meals."
+        },
+        {
+            "Day 13: Mustang Adventure": "Continue exploring Mustang. Take in the stunning views and cultural sites."
+        },
+        {
+            "Day 14: Ride to Bhedetar": "Motorcycle journey to Bhedetar. Check into a budget accommodation. Evening relaxation."
+        },
+        {
+            "Day 15: Explore Bhedetar": "Discover Bhedetar's scenic beauty. Visit local attractions and enjoy local roti."
+        },
+        {
+            "Day 16: Return to Kathmandu": "Ride back to Kathmandu. Check into a cheap hotel. Evening stroll in Thamel."
+        },
+        {
+            "Day 17: Kathmandu Relaxation": "Rest day. Visit local markets and enjoy Nepali cuisine like chicken curry."
+        },
+        {
+            "Day 18: Kathmandu Exploration": "Visit cultural sites like Boudhanath and Bhaktapur. Enjoy momos for lunch."
+        },
+        {
+            "Day 19: Souvenir Shopping": "Last-minute shopping in Kathmandu. Relax and prepare for departure."
+        },
+        {
+            "Day 20: Departure": "Check out of the hotel and head to the airport for your journey home."
+        }
+    ],
+    "ac034fe5-cf00-4133-b97c-20b8fa3ae046": [
+        {
+            "Day 1: Arrival in Kathmandu": "Arrive in Kathmandu and check into a budget-friendly hotel like Kathmandu Grand Hotel. Explore Thamel for shopping and dining. Enjoy a dinner of momos and chicken curry at OR2K restaurant."
+        },
+        {
+            "Day 2: Kathmandu Sightseeing": "Visit Pashupatinath and Swoyambhunath (Monkey Temple). Have lunch at a local eatery with dalbhat. In the evening, explore the vibrant streets of Thamel."
+        },
+        {
+            "Day 3: Ride to Dhampus": "Rent a motorcycle and ride to Dhampus. Check into a low-cost guesthouse like Dhampus Village Guesthouse. Enjoy stunning mountain views and a traditional Nepali dinner of dalbhat and roti."
+        },
+        {
+            "Day 4: Hiking in Dhampus": "Spend the day hiking and exploring the Dhampus area. Have a packed lunch and return to the guesthouse for a relaxing evening with a warm meal."
+        },
+        {
+            "Day 5: Ride to Pokhara": "Ride to Pokhara. Check into a budget hotel such as Hotel Point. In the evening, stroll around Phewa Lake and dine on momos at a lakeside restaurant."
+        },
+        {
+            "Day 6: Pokhara Sightseeing": "Start with a visit to Davis Falls and Gupteshwor Cave. Have lunch at a local eatery. In the afternoon, visit the International Mountain Museum. Enjoy dinner at a lakeside restaurant."
+        },
+        {
+            "Day 7: Paragliding in Pokhara": "Experience paragliding with a local agency like Sunrise Paragliding. Afterward, enjoy a relaxed afternoon by the lake and dinner at a local restaurant."
+        },
+        {
+            "Day 8: Boating on Phewa Lake": "Spend the morning boating on Phewa Lake. Have lunch at a lakeside caf\u00e9. In the afternoon, visit the World Peace Pagoda. Return to the hotel for dinner."
+        },
+        {
+            "Day 9: Ride to Mustang": "Start early for the ride to Mustang. Check into a budget-friendly guesthouse like Hotel Mustang Gateway. Enjoy a traditional meal of dalbhat and chicken curry."
+        },
+        {
+            "Day 10: Explore Mustang": "Spend the day exploring Mustang. Visit local monasteries and enjoy the unique landscape. Have lunch at a local eatery. Return to the guesthouse for dinner."
+        },
+        {
+            "Day 11: Ride to Bhedetar": "Ride to Bhedetar and check into a low-cost guesthouse like Bhedetar Eco Resort. Relax and enjoy the moderate weather and beautiful views. Have dinner at the guesthouse."
+        },
+        {
+            "Day 12: Bhedetar Exploration": "Explore Bhedetar and its surroundings. Enjoy local hikes and visit viewpoints. Have lunch at a local restaurant. Return to the guesthouse for dinner."
+        },
+        {
+            "Day 13: Ride to Chitwan": "Ride to Chitwan and check into a budget hotel such as Hotel Parkland. In the evening, enjoy a traditional Tharu cultural dance show and dinner at the hotel."
+        },
+        {
+            "Day 14: Chitwan Safari": "Spend the day on a jungle safari in Chitwan National Park. Spot wildlife and enjoy a packed lunch. Return to the hotel for dinner."
+        },
+        {
+            "Day 15: Chitwan Boating": "Spend the morning boating on the Rapti River. Enjoy a picnic lunch. In the afternoon, visit the Elephant Breeding Center. Return to the hotel for dinner."
+        },
+        {
+            "Day 16: Ride Back to Pokhara": "Ride back to Pokhara. Check into the same budget hotel. Relax and enjoy dinner at a lakeside restaurant."
+        },
+        {
+            "Day 17: Relax in Pokhara": "Spend a relaxed day in Pokhara. Visit the local market and enjoy a leisurely lunch. In the evening, take a boat ride on Phewa Lake before dinner."
+        },
+        {
+            "Day 18: Ride Back to Kathmandu": "Ride back to Kathmandu. Check into the same budget-friendly hotel. Spend the evening exploring Thamel and enjoy a farewell dinner of Nepali cuisine."
+        },
+        {
+            "Day 19: Free Day in Kathmandu": "Enjoy a free day for last-minute shopping or sightseeing in Kathmandu. Have lunch at a local restaurant and revisit your favorite spots. Return to the hotel for dinner."
+        },
+        {
+            "Day 20: Departure": "Check out from the hotel and transfer to the airport for your departure. Reflect on your amazing trip through the mountains of Nepal."
+        }
+    ],
+    "1ac1c6b4-740d-4dc7-962c-a7b304af2c55": [
+        {
+            "Day 1: Arrival in Kathmandu": "Arrive in Kathmandu, check into a budget-friendly hotel like Kathmandu Guest House in Thamel. Rest and get acclimated. In the evening, explore Thamel's bustling markets and try local momos at Yangling Tibetan Restaurant."
+        },
+        {
+            "Day 2: Explore Kathmandu": "Visit cultural landmarks such as Pashupatinath Temple and Swoyambhunath Stupa (Monkey Temple). Enjoy a traditional Nepali dinner with dalbhat and chicken curry at Bhojan Griha."
+        },
+        {
+            "Day 3: Kathmandu to Pokhara": "Rent a motorcycle and ride to Pokhara (approximately 6-7 hours). Check into a budget hotel like Hotel Middle Path & Spa. Stroll along Phewa Lake and dine at Moondance Restaurant, famous for its momos and local cuisine."
+        },
+        {
+            "Day 4: Pokhara Sightseeing": "Start your day with boating on Phewa Lake, then visit Davis Falls and the World Peace Pagoda. For lunch, enjoy chicken curry at OR2K. Spend the night at your hotel."
+        },
+        {
+            "Day 5: Paragliding in Pokhara": "Experience paragliding in Sarangkot, offering breathtaking views of the Annapurna range. Have lunch at a local eatery. In the evening, relax by the lake and try roti and dalbhat at Lakeside restaurants."
+        },
+        {
+            "Day 6: Pokhara to Dhampus": "Ride your motorcycle to Dhampus, a scenic village offering stunning mountain views (1.5-hour ride). Check into a local guesthouse like Panorama Guest House. Enjoy local dishes such as momos and dalbhat."
+        },
+        {
+            "Day 7: Explore Dhampus": "Spend the day hiking around Dhampus, soaking in the majestic views of the Annapurna range. Enjoy local meals at your guesthouse."
+        },
+        {
+            "Day 8: Dhampus to Mustang": "Embark on an adventurous bike trip to Mustang. This journey will take you through rugged terrains and beautiful landscapes. Stay at a budget-friendly lodge like Hotel Royal Mustang. Enjoy local cuisine."
+        },
+        {
+            "Day 9: Explore Mustang": "Explore the mystical landscapes of Mustang, visit ancient monasteries. Have lunch at local eateries. Spend the night at your lodge."
+        },
+        {
+            "Day 10: Mustang to Bhedetar": "Ride to Bhedetar, a hill station in the eastern region (this will be a long ride, plan for breaks). Check into a budget hotel like Hotel Namaste Jharana. Enjoy local dishes."
+        },
+        {
+            "Day 11: Relax in Bhedetar": "Relax and enjoy the serene environment of Bhedetar. Take short walks and explore the local area. Have meals at your hotel or local restaurants."
+        },
+        {
+            "Day 12: Bhedetar to Chitwan": "Ride to Chitwan (approximately 5-6 hours). Check into a budget-friendly hotel like Rhino Lodge & Hotel. In the evening, enjoy a traditional Tharu cultural show."
+        },
+        {
+            "Day 13: Chitwan Jungle Safari": "Take a jungle safari in Chitwan National Park. Spot wildlife such as rhinos, tigers, and various bird species. Have lunch at your hotel. In the evening, enjoy a hearty dinner with dalbhat and chicken curry."
+        },
+        {
+            "Day 14: Explore Chitwan": "Visit the elephant breeding center, go canoeing, and take a nature walk. Have meals at local restaurants or your hotel."
+        },
+        {
+            "Day 15: Chitwan to Pokhara": "Ride back to Pokhara. Check into your previous hotel. Rest and enjoy an evening by Phewa Lake."
+        },
+        {
+            "Day 16: Relax in Pokhara": "Spend the day relaxing, visiting local markets, and enjoying lakeside cafes. Try different local dishes at various restaurants."
+        },
+        {
+            "Day 17: Pokhara to Kathmandu": "Ride back to Kathmandu. Check into your previous hotel. Rest and explore more of Thamel in the evening."
+        },
+        {
+            "Day 18: Kathmandu Valley Tour": "Take a day trip to Bhaktapur and Patan, exploring their ancient temples and squares. Have lunch at local restaurants. Return to Kathmandu for dinner."
+        },
+        {
+            "Day 19: Final Shopping in Kathmandu": "Spend the day shopping for souvenirs in Thamel and Asan Bazaar. Enjoy a farewell dinner at a fine dining restaurant like Krishnarpan."
+        },
+        {
+            "Day 20: Departure": "Prepare for departure. Depending on your flight time, you may have a final stroll around Thamel. Check out from the hotel and head to the airport."
+        }
+    ],
+    "a0ed99e2-30bc-41b9-8826-b843b5a84db0": [
+        {
+            "Day 1: Arrival in Kathmandu": "Arrive in Kathmandu, Nepal. Check into a budget hotel like Hotel Yala Peak in Thamel. Relax and adjust to the new environment. Enjoy a traditional Nepali dinner featuring momos and dalbhat at Thamel House Restaurant."
+        },
+        {
+            "Day 2: Explore Kathmandu": "Visit Pashupatinath Temple and Swoyambhunath (Monkey Temple). Lunch at a local restaurant, try chicken curry and roti. Explore Thamel's markets in the evening. Return to Hotel Yala Peak for the night."
+        },
+        {
+            "Day 3: Ride to Pokhara": "Rent a motorcycle and ride to Pokhara. Check into a budget hotel like Hotel Silver Oaks Inn. Enjoy a lakeside dinner with momos and dalbhat at Moondance Restaurant."
+        },
+        {
+            "Day 4: Explore Pokhara": "Visit Phewa Lake for boating in the morning. Lunch at OR2K Pokhara. Afternoon visit to Davis Falls and the World Peace Pagoda. Dinner at Busy Bee Cafe, try chicken curry."
+        },
+        {
+            "Day 5: Paragliding in Pokhara": "Morning paragliding session with Frontiers Paragliding. Relax at the lakeside cafes. Dinner at Byanjan Restaurant, try dalbhat and roti."
+        },
+        {
+            "Day 6: Ride to Dhampus": "Motorcycle ride to Dhampus. Check into Dhampus Village Eco Lodge. Explore the village and enjoy the mountain views. Dinner at the lodge with traditional Nepali food."
+        },
+        {
+            "Day 7: Trekking in Dhampus": "Full day of trekking in Dhampus with a local guide. Enjoy packed lunch during the trek. Return to the lodge for dinner and relaxation."
+        },
+        {
+            "Day 8: Ride to Mustang": "Early morning motorcycle ride to Mustang. Check into a budget hotel like Hotel Tilicho. Explore the local area and enjoy a simple dinner at a nearby eatery."
+        },
+        {
+            "Day 9: Explore Mustang": "Visit Muktinath Temple and nearby attractions. Lunch at a local restaurant, try chicken curry. Enjoy the scenic views and return to Hotel Tilicho for dinner."
+        },
+        {
+            "Day 10: Ride to Bhedetar": "Ride to Bhedetar. Check into a budget hotel like Hotel Namaste Jharana. Explore the hill station and enjoy a simple dinner at the hotel."
+        },
+        {
+            "Day 11: Explore Bhedetar": "Visit Charles Point and other local attractions. Lunch at a local restaurant, try momos and dalbhat. Relax and enjoy the views. Return to the hotel for dinner."
+        },
+        {
+            "Day 12: Ride to Chitwan": "Motorcycle ride to Chitwan. Check into a budget hotel like Chitwan Tiger Camp. Relax and enjoy a traditional Nepali dinner at the hotel."
+        },
+        {
+            "Day 13: Chitwan National Park": "Full day of jungle activities in Chitwan National Park including a jungle safari. Packed lunch provided. Dinner at the hotel, try chicken curry and roti."
+        },
+        {
+            "Day 14: Explore Chitwan": "Morning canoe trip on the Rapti River. Lunch at a local restaurant, try dalbhat. Visit Tharu Village in the afternoon. Return to the hotel for dinner."
+        },
+        {
+            "Day 15: Ride back to Kathmandu": "Motorcycle ride back to Kathmandu. Check into Hotel Yala Peak. Dinner at a local restaurant, try momos and dalbhat."
+        },
+        {
+            "Day 16: Relax in Kathmandu": "Relax and explore more of Kathmandu. Visit local markets and shops. Lunch at a local eatery, try chicken curry. Return to the hotel for dinner."
+        },
+        {
+            "Day 17: Day Trip to Nagarkot": "Day trip to Nagarkot on the motorcycle. Enjoy the panoramic views of the Himalayas. Packed lunch. Return to Kathmandu in the evening."
+        },
+        {
+            "Day 18: Cultural Tour in Kathmandu": "Visit Patan Durbar Square and Bhaktapur. Lunch at a local restaurant, try dalbhat and momos. Return to the hotel for dinner."
+        },
+        {
+            "Day 19: Free Day in Kathmandu": "Free day to explore or relax. Optional shopping or additional sightseeing. Lunch and dinner at local eateries."
+        },
+        {
+            "Day 20: Departure": "Final shopping and packing. Transfer to Tribhuvan International Airport for your departure flight back to Australia."
         }
     ]
 }

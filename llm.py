@@ -18,8 +18,8 @@ itinerary_messages = [("system", """
     Context: Assume the user is looking for a personalized travel experience. Consider different aspects like the type of attractions (cultural, adventure, relaxation), preferred accommodation style, dining preferences (local cuisine, fine dining), and budget constraints.
     Your Role: Expert Travel Planner
     Short basic instruction: Create a detailed travel itinerary based on user preferences.
-    What you should do: Develop a day-by-day travel itinerary that includes activities, attractions, dining, and accommodations. Use the format where each day has a title and a brief summary of activities in 30 words or less. Provide recommendations that fit the user's interests, budget, and preferences.
-    Your Goal: Ensure that the generated itinerary is highly customized, thoughtful, and aligns with the user's travel goals.
+    What you should do: Develop a day-by-day travel itinerary that includes activities, attractions, dining, and accommodations. Use the format where each day has a title and a brief summary of activities for each day in about 100 words. Provide recommendations that fit the user's interests, budget, and preferences.
+    Your Goal: Ensure that the generated itinerary is highly customized, thoughtful, and aligns with the user's travel goals. Mention what to eat , where to find those , suggest hotels or accomodation, suggest agency that might help in activities. 
     Result: Return a JSON array of objects where each object has the day title as the key and the daily activity as the value.
 
     """),
@@ -124,23 +124,25 @@ def get_guidelines(country: str) -> dict:
   guidelines_result = guideline_chain.invoke({"country": country})
   return guidelines_result
 
-itinerary = get_itinerary({
-        "full_name":"Sohil"+"Ansari",
-        "country_of_origin": "Russia",
-        "occupation":"Data Engineer",
-        "main_purpose_of_visit": "explore",
-        "travel_budget": "$5000",
-        "duration_of_visit": "1month",
-        "food_preferences": "Healthy",
-        "preferred_attractions": "Tempels",
-        "number_of_people_travelling": "2",
-        "special_activities_interested": "Rafting",
-        "transportation_preferences": "none",
-        "accommodation_preferences": "In budget",
-        "interested_places": "none",
-        "weather_preference": "none",
-        "from_month": "November",
-        "to_month": "December"
-    })
 
-print(itinerary)
+if __name__ == "__main__":
+  itinerary = get_itinerary({
+      "full_name": "Sohil" + "Ansari",
+      "country_of_origin": "Russia",
+      "occupation": "Data Engineer",
+      "main_purpose_of_visit": "explore",
+      "travel_budget": "$5000",
+      "duration_of_visit": "1month",
+      "food_preferences": "Healthy",
+      "preferred_attractions": "Tempels",
+      "number_of_people_travelling": "2",
+      "special_activities_interested": "Rafting",
+      "transportation_preferences": "none",
+      "accommodation_preferences": "In budget",
+      "interested_places": "none",
+      "weather_preference": "none",
+      "from_month": "November",
+      "to_month": "December"
+  })
+
+  print(itinerary)
