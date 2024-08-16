@@ -1,0 +1,4 @@
+Endpoint: https://dblunt.openai.azure.com/
+Primary Key: 92061e05ce11414bb8196cbe5b1448d0
+Secondary Key: 4ec516aed62046cd84f12e4e13f5518a
+!L82XV6tUF
