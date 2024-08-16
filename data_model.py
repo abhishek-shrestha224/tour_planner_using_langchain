@@ -12,6 +12,7 @@ class DataModel(BaseModel):
   main_purpose_of_visit: str
   travel_budget: float
   duration_of_visit: int
+  food_preferences: str
   preferred_attractions: str
   number_of_people_travelling: int
   special_activities_interested: Optional[str] = None
@@ -19,4 +20,5 @@ class DataModel(BaseModel):
   accommodation_preferences: Optional[str] = None
   interested_places: Optional[List[str]] = None
   weather_preference: Optional[str] = None
-  month_of_visit: Optional[List[str]] = None
+  from_month: Optional[str] = None
+  from_to: Optional[str] = None

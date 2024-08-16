@@ -50,22 +50,6 @@ itinerary_messages = [("system", """
 
 itinerary_prompt = ChatPromptTemplate.from_messages(itinerary_messages)
 
-travel_info = {
-    "full_name": "Abhishek Shrestha",
-    "country_of_origin": "USA",
-    "occupation": "Software Engineer",
-    "main_purpose_of_visit": "Travel",
-    "travel_budget": "$2000",
-    "duration_of_visit": "90 days",
-    "preferred_attractions": "Nature, Food",
-    "special_activities": "Paragliding",
-    "number_of_people": "2",
-    "transportation_accommodation": "Flights, Hotels",
-    "interested_places": "Pokhara, Kathmandu",
-    "weather_preference": "Warm",
-    "months_of_visit": "October"
-}
-
 
 def json_decode_array(json_str):
   start_index = json_str.find('[')
@@ -84,9 +68,11 @@ itinerary = RunnableLambda(lambda x: json_decode_array(x))
 
 itinerary_chain = itinerary_prompt | llm | StrOutputParser() | itinerary
 
-itinerary_result = itinerary_chain.invoke(travel_info)
 
-print(itinerary_result)
+def get_itinerary(travel_info: dict) -> list:
+  itinerary_result = itinerary_chain.invoke(travel_info)
+  return itinerary_result
+
 
 # ! ||--------------------------------------------------------------------------------||
 # ! ||                                 Guideline Chain                                ||
@@ -134,6 +120,7 @@ guidelines = RunnableLambda(lambda x: json_decode_map(x))
 
 guideline_chain = guideline_prompt | llm | StrOutputParser() | guidelines
 
-guidelines_result = guideline_chain.invoke({"country": "USA"})
 
-print(guidelines_result)
+def get_guidelines(country: str) -> dict:
+  guidelines_result = guideline_chain.invoke({"country": country})
+  return guidelines_result
