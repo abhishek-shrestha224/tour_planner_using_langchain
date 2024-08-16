@@ -15,12 +15,13 @@ llm = AzureChatOpenAI(azure_deployment="gpt-4o",
 # ! ||--------------------------------------------------------------------------------||
 
 itinerary_messages = [("system", """
-                       Context: Assume the user is looking for a personalized travel experience. Consider different aspects like the type of attractions (cultural, adventure, relaxation), preferred accommodation style, dining preferences (local cuisine, fine dining), and budget constraints.
-                       Your Role: Expert Travel Planner
-                       Short basic instruction: Create a detailed travel itinerary based on user preferences.
-                       What you should do: Develop a day-by-day travel itinerary that includes activities, attractions, dining, and accommodations. Use the format where each day has a title and a brief summary of activities in 30 words or less. Provide recommendations that fit the user's interests, budget, and preferences.
-                       Your Goal: Ensure that the generated itinerary is highly customized, thoughtful, and aligns with the user's travel goals.
-                       Result: Return a JSON array of objects where each object has the day title as the key and the daily activity as the value.
+    Context: Assume the user is looking for a personalized travel experience. Consider different aspects like the type of attractions (cultural, adventure, relaxation), preferred accommodation style, dining preferences (local cuisine, fine dining), and budget constraints.
+    Your Role: Expert Travel Planner
+    Short basic instruction: Create a detailed travel itinerary based on user preferences.
+    What you should do: Develop a day-by-day travel itinerary that includes activities, attractions, dining, and accommodations. Use the format where each day has a title and a brief summary of activities in 30 words or less. Provide recommendations that fit the user's interests, budget, and preferences.
+    Your Goal: Ensure that the generated itinerary is highly customized, thoughtful, and aligns with the user's travel goals.
+    Result: Return a JSON array of objects where each object has the day title as the key and the daily activity as the value.
+
     """),
                       ("human", """
             **My Preferences:**
@@ -29,15 +30,19 @@ itinerary_messages = [("system", """
             - **Country Of Origin:** {country_of_origin}
             - **Occupation:** {occupation}
             - **Main Purpose of Visit:** {main_purpose_of_visit}
-            - **Travel Budget:** {travel_budget}
+            - **Travel Budget:** Nepali Rupees{travel_budget}
             - **Duration Of Visit:** {duration_of_visit}
+            - **Food Preferences:** {food_preferences}
             - **Preferred Attractions:** {preferred_attractions}
-            - **Special Activities Interested In:** {special_activities}
-            - **Number of People Traveling:** {number_of_people}
-            - **Transportation & Accommodation Preferences:** {transportation_accommodation}
+            - **Number of People Traveling:** {number_of_people_travelling}
+            - **Special Activities Interested In:** {special_activities_interested}
+            - **Transportation Preferences:** {transportation_preferences}
+            - **Accomodation Preferences:** {accommodation_preferences}
             - **Interested Places:** {interested_places}
             - **Weather Preference:** {weather_preference}
-            - **Month(s) of Visit:** {months_of_visit}
+            - **Visiting From:** {from_month}
+            - **Visiting To:** {to_month}
+
 
             Make sure the activities and recommendations are suited to the my preferences and budget."""
                        )]
