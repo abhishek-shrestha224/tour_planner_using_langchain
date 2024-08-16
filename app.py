@@ -1,19 +1,24 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import ValidationError
 from data_model import DataModel
+from llm import get_itinerary
 from custom_error import DuplicateError
-from uuid import uuid4
+from uuid import uuid4, UUID
 import csv
+import json
 
-app = FastAPI()
+# ! ||--------------------------------------------------------------------------------||
+# ! ||                               Read Write Fuctions                              ||
+# ! ||--------------------------------------------------------------------------------||
 
-CSV_FILE_PATH = 'user_ data.csv'
+ITINERARY_PATH = "itinerary.json"
+USER_PATH = 'user_ data.csv'
 
 
-def save_tasks_to_csv(data: DataModel) -> None:
+def save_user(data: DataModel) -> None:
   existing_data = []
   try:
-    with open(CSV_FILE_PATH, 'r', newline='') as file:
+    with open(USER_PATH, 'r', newline='') as file:
       reader = csv.DictReader(file)
       for row in reader:
         existing_data.append({
@@ -23,7 +28,7 @@ def save_tasks_to_csv(data: DataModel) -> None:
   except FileNotFoundError:
     pass
 
-  with open(CSV_FILE_PATH, 'a', newline='') as file:
+  with open(USER_PATH, 'a', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=DataModel.__annotations__.keys())
 
     if file.tell() == 0:
@@ -43,17 +48,82 @@ def save_tasks_to_csv(data: DataModel) -> None:
     })
 
 
+def load_all_itinerary():
+  try:
+    with open(ITINERARY_PATH, 'r') as f:
+      loaded_data = json.load(f)
+    return loaded_data
+  except FileNotFoundError:
+    raise FileNotFoundError("File not found.")
+  except json.JSONDecodeError:
+    raise ValueError("Error decoding JSON from the file.")
+  except KeyError as e:
+    raise e
+
+
+def save_itinerary(id, body):
+  try:
+    list_dict = load_all_itinerary()
+    list_dict[id] = body
+    with open(ITINERARY_PATH, 'w') as f:
+      json.dump(list_dict, f, indent=4)
+  except FileNotFoundError:
+    raise FileNotFoundError("File not found.")
+  except json.JSONDecodeError:
+    raise ValueError("Error decoding JSON from the file.")
+  except KeyError as e:
+    raise e
+
+
+def load_itinerary_by_id(id):
+  try:
+    with open(ITINERARY_PATH, 'r') as f:
+      loaded_data = json.load(f)
+    if id not in loaded_data:
+      raise KeyError(f"List ID {id} not found")
+    result = loaded_data[id]
+    return result
+  except FileNotFoundError:
+    raise FileNotFoundError("File not found.")
+  except json.JSONDecodeError:
+    raise ValueError("Error decoding JSON from the file.")
+  except KeyError as e:
+    raise e
+
+
+app = FastAPI()
+
+
 @app.get("/")
 def root():
   return {"Hello": "World"}
 
 
-@app.get("/get-iternary")
-def get_plan(data: DataModel):
+@app.post("/iternary/create")
+def create_itinerary(data: DataModel):
   data.id = uuid4()
   try:
-    save_tasks_to_csv(data)
-    return {"success": True, "plan": {"Day-2": "Say Hello"}}
+    save_user(data)
+    itinerary = get_itinerary({
+        "full_name": data.first_name + data.last_name,
+        "country_of_origin": data.country_of_origin,
+        "occupation": data.occupation,
+        "main_purpose_of_visit": data.main_purpose_of_visit,
+        "travel_budget": data.travel_budget,
+        "duration_of_visit": data.duration_of_visit,
+        "food_preferences": data.food_preferences,
+        "preferred_attractions": data.preferred_attractions,
+        "number_of_people_travelling": data.number_of_people_travelling,
+        "special_activities_interested": data.special_activities_interested,
+        "transportation_preferences": data.transportation_preferences,
+        "accommodation_preferences": data.accommodation_preferences,
+        "interested_places": data.interested_places,
+        "weather_preference": data.weather_preference,
+        "from_month": data.from_month,
+        "to_month": data.to_month
+    })
+    save_itinerary(str(data.id), itinerary)
+    return {"success": True, "plan": itinerary}
 
   except ValidationError as e:
     raise HTTPException(status_code=400, detail=str(e))
@@ -61,6 +131,17 @@ def get_plan(data: DataModel):
   except DuplicateError as e:
     raise HTTPException(status_code=400, detail=str(e))
 
+  except Exception as e:
+    raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/itinerary/{param}", response_model=list)
+def get_itinerary_by_id(param: str):
+  try:
+    itinerary = load_itinerary_by_id(param)
+    return itinerary
+  except KeyError as e:
+    raise HTTPException(status_code=404, detail=str(e))
   except Exception as e:
     raise HTTPException(status_code=500, detail=str(e))
 

@@ -35,15 +35,19 @@ itinerary_messages = [("system", """
             - **Country Of Origin:** {country_of_origin}
             - **Occupation:** {occupation}
             - **Main Purpose of Visit:** {main_purpose_of_visit}
-            - **Travel Budget:** {travel_budget}
+            - **Travel Budget:** Nepali Rupees{travel_budget}
             - **Duration Of Visit:** {duration_of_visit}
+            - **Food Preferences:** {food_preferences}
             - **Preferred Attractions:** {preferred_attractions}
-            - **Special Activities Interested In:** {special_activities}
-            - **Number of People Traveling:** {number_of_people}
-            - **Transportation & Accommodation Preferences:** {transportation_accommodation}
+            - **Number of People Traveling:** {number_of_people_travelling}
+            - **Special Activities Interested In:** {special_activities_interested}
+            - **Transportation Preferences:** {transportation_preferences}
+            - **Accomodation Preferences:** {accommodation_preferences}
             - **Interested Places:** {interested_places}
             - **Weather Preference:** {weather_preference}
-            - **Month(s) of Visit:** {months_of_visit}
+            - **Visiting From:** {from_month}
+            - **Visiting To:** {to_month}
+
 
             Make sure the activities and recommendations are suited to the my preferences and budget."""
                        )]

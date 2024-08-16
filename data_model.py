@@ -21,4 +21,4 @@ class DataModel(BaseModel):
   interested_places: Optional[List[str]] = None
   weather_preference: Optional[str] = None
   from_month: Optional[str] = None
-  from_to: Optional[str] = None
+  to_month: Optional[str] = None
