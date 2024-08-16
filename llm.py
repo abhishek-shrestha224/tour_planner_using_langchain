@@ -15,18 +15,12 @@ llm = AzureChatOpenAI(azure_deployment="gpt-4o",
 # ! ||--------------------------------------------------------------------------------||
 
 itinerary_messages = [("system", """
-    You are an expert travel planner. Given the following details, generate a detailed day-by-day travel itinerary. Include recommendations for activities, attractions, dining options, and accommodation for each day of the visit. Ensure that the itinerary aligns with the user's preferences, budget, and interests. 
-    Generate the itinerary with the following format:
-    Title for Day 1:
-    What to do the whole day couple of sentences at most 30 words.
-
-    Title for Day 2:
-    What to do the whole day couple of sentences at most 30 words.
-
-    Title for Day 3:
-    What to do the whole day couple of sentences at most 30 words.
-
-    The ouput must in the form of json array of objects where each object has plan title as key and daily activity as value
+                       Context: Assume the user is looking for a personalized travel experience. Consider different aspects like the type of attractions (cultural, adventure, relaxation), preferred accommodation style, dining preferences (local cuisine, fine dining), and budget constraints.
+                       Your Role: Expert Travel Planner
+                       Short basic instruction: Create a detailed travel itinerary based on user preferences.
+                       What you should do: Develop a day-by-day travel itinerary that includes activities, attractions, dining, and accommodations. Use the format where each day has a title and a brief summary of activities in 30 words or less. Provide recommendations that fit the user's interests, budget, and preferences.
+                       Your Goal: Ensure that the generated itinerary is highly customized, thoughtful, and aligns with the user's travel goals.
+                       Result: Return a JSON array of objects where each object has the day title as the key and the daily activity as the value.
     """),
                       ("human", """
             **My Preferences:**
@@ -35,19 +29,15 @@ itinerary_messages = [("system", """
             - **Country Of Origin:** {country_of_origin}
             - **Occupation:** {occupation}
             - **Main Purpose of Visit:** {main_purpose_of_visit}
-            - **Travel Budget:** Nepali Rupees{travel_budget}
+            - **Travel Budget:** {travel_budget}
             - **Duration Of Visit:** {duration_of_visit}
-            - **Food Preferences:** {food_preferences}
             - **Preferred Attractions:** {preferred_attractions}
-            - **Number of People Traveling:** {number_of_people_travelling}
-            - **Special Activities Interested In:** {special_activities_interested}
-            - **Transportation Preferences:** {transportation_preferences}
-            - **Accomodation Preferences:** {accommodation_preferences}
+            - **Special Activities Interested In:** {special_activities}
+            - **Number of People Traveling:** {number_of_people}
+            - **Transportation & Accommodation Preferences:** {transportation_accommodation}
             - **Interested Places:** {interested_places}
             - **Weather Preference:** {weather_preference}
-            - **Visiting From:** {from_month}
-            - **Visiting To:** {to_month}
-
+            - **Month(s) of Visit:** {months_of_visit}
 
             Make sure the activities and recommendations are suited to the my preferences and budget."""
                        )]
@@ -128,3 +118,24 @@ guideline_chain = guideline_prompt | llm | StrOutputParser() | guidelines
 def get_guidelines(country: str) -> dict:
   guidelines_result = guideline_chain.invoke({"country": country})
   return guidelines_result
+
+itinerary = get_itinerary({
+        "full_name":"Sohil"+"Ansari",
+        "country_of_origin": "Russia",
+        "occupation":"Data Engineer",
+        "main_purpose_of_visit": "explore",
+        "travel_budget": "$5000",
+        "duration_of_visit": "1month",
+        "food_preferences": "Healthy",
+        "preferred_attractions": "Tempels",
+        "number_of_people_travelling": "2",
+        "special_activities_interested": "Rafting",
+        "transportation_preferences": "none",
+        "accommodation_preferences": "In budget",
+        "interested_places": "none",
+        "weather_preference": "none",
+        "from_month": "November",
+        "to_month": "December"
+    })
+
+print(itinerary)
