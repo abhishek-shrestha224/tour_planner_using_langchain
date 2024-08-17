@@ -1,5 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Harmond";
+  src: url(font/Harmond-SemiBoldCondensed.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kalivo";
+  src: url(font/Kalivo-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Frutiger";
+  src: url(font/Frutiger.ttf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --dark-color: #181300;
+  --light-color: #f4f3cc;
+  --accent-color: #2f4858;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Frutiger";
+}
+
+.font-frutiger {
+  font-family: "Frutiger";
+}
+
+.font-montserrat {
+  font-family: "Montserrat";
+}
+
+.font-kalivo {
+  font-family: "Kalivo";
+}
+
+.font-harmond {
+  font-family: "Harmond";
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+.text-light {
+  color: var(--light-color);
+}
+.text-accent {
+  color: var(--accent-color);
+}
+
+/* Styles Start Here */
+
+.bg-wrapper {
+  background-image: url(img/bg.png);
+  background-size: cover;
 }

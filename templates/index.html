@@ -5,9 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <section  class="bg-wrapper h-screen w-screen">
+      <div class="h-full w-full bg px-12 py-8">
+        <div class="flex flex-col h-full">
+          <div class="h-36 flex items-center" >
+            <h2 class="text-7xl font-kalivo text-dark">Go Beyond Guidelines - Explore Nepal with NepalRover.ai</h2>
+          </div>
+          <div class="flex-grow flex">
+            <div class="h-full flex-1 px-12">
+              <div class="h-full w-[70%]">
+                <img src="{{ url_for('static', path='/img/tiger.jpg') }}" class="h-full  object-cover">
+              </div>
+            </div>
+            <div class="h-full flex-1 flex flex-col gap-4">
+              <div class="h-28 flex items-center">
+                <h3 class="text-lg font-frutiger text-dark">
+                  Whether you're seeking adventure, relaxation, or cultural exploration, we make it effortless to create the perfect travel plan. Start planning today and let NepalRover.ai take you on a trip that’s uniquely yours!
+                </h3>
+              </div>
+              <div class="flex gap-8">
+                <div class="flex-1 aspect-[1/1]" >
+                  <img src="{{ url_for('static', path='/img/paragliding.jpg') }}" class="w-full h-full object-cover">
+                </div>
+                <div class="flex-1 aspect-[1/1]">
+                  <img src="{{ url_for('static', path='/img/phewa.webp') }}" class="w-full h-full object-cover">
+                </div>
+              </div>
+              <div class="h-20 flex items-center">
+                <button type="button" class="text-white bg-[#050708] hover:scale-90 duration-75 focus:outline-none  rounded-lg text-sm font-montserrat px-12 py-4 text-center inline-flex items-center me-2 mb-2">
+                    Get Customized Travel Plan
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
+    </section>
   </body>
 </html>

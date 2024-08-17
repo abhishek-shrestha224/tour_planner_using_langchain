@@ -19,7 +19,9 @@ templates = Jinja2Templates(directory="templates")
 
 @app.get("/")
 async def root(request: Request, response_class=HTMLResponse):
-  return templates.TemplateResponse(request=request, name="index.html")
+  return templates.TemplateResponse(request=request,
+                                    name="index.html",
+                                    context={"name": "Abhishek"})
 
 
 @app.get("/itinerary/create", response_class=HTMLResponse)
