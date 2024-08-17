@@ -156,9 +156,12 @@ def get_itinerary(request: Request, first_name: str, last_name: str,
       "to_month":
       form_data["to_month"]
   })
-  print(it, gl)
   return templates.TemplateResponse(request=request,
-                                    name="show-itinerary.html")
+                                    name="show-itinerary.html",
+                                    context={
+                                        "it": it,
+                                        "gl": gl
+                                    })
 
 
 if __name__ == "__main__":

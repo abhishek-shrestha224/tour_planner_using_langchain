@@ -20,7 +20,7 @@ itinerary_messages = [("system", """
     Short basic instruction: Create a detailed travel itinerary based on user preferences.
     What you should do: Develop a day-by-day travel itinerary that includes activities, attractions, dining, and accommodations. Use the format where each day has a title and a brief summary of activities for each day in about 100 words. Provide recommendations that fit the user's interests, budget, and preferences.
     Your Goal: Ensure that the generated itinerary is highly customized, thoughtful, and aligns with the user's travel goals. Mention what to eat , where to find those , suggest hotels or accomodation, suggest agency that might help in activities. 
-    Result: Return a JSON array of objects where each object has the day title as the key and the daily activity as the value.
+    Result: Return a JSON array of maps here the title is key and the whole day plan is the value
 
     """),
                       ("human", """

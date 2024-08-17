@@ -16,25 +16,10 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Montserrat";
-  src: url(font/Montserrat-Medium.ttf);
-  font-weight: 500;
-  font-style: normal;
-}
-
 :root {
   --dark-color: #181300;
   --light-color: #f4f3cc;
   --accent-color: #2f4858;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat";
-  font-weight: 500;
 }
 
 .font-montserrat {
