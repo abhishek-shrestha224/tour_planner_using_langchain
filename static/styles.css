@@ -3,12 +3,6 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Harmond";
-  src: url(font/Harmond-SemiBoldCondensed.otf);
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
   font-family: "Kalivo";
   src: url(font/Kalivo-Regular.ttf);
   font-weight: 400;
@@ -16,15 +10,16 @@
 }
 
 @font-face {
-  font-family: "Frutiger";
-  src: url(font/Frutiger.ttf);
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "Montserrat";
   src: url(font/Montserrat-Bold.ttf);
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(font/Montserrat-Medium.ttf);
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -38,11 +33,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Frutiger";
-}
-
-.font-frutiger {
-  font-family: "Frutiger";
+  font-family: "Montserrat";
+  font-weight: 500;
 }
 
 .font-montserrat {
@@ -53,15 +45,18 @@
   font-family: "Kalivo";
 }
 
-.font-harmond {
-  font-family: "Harmond";
-}
-
 .text-dark {
   color: var(--dark-color);
 }
 .text-light {
   color: var(--light-color);
+}
+
+.bg-dark {
+  background-color: var(--dark-color);
+}
+.bg-light {
+  background-color: var(--light-color);
 }
 .text-accent {
   color: var(--accent-color);
@@ -70,6 +65,20 @@
 /* Styles Start Here */
 
 .bg-wrapper {
-  background-image: url(img/bg.png);
+  background-image: url(img/phewa.webp);
   background-size: cover;
+}
+
+.img-tiger {
+  height: 100%;
+  width: 70%;
+  background-image: url(img/tiger.jpg);
+  background-size: cover;
+}
+
+.img-tiger div {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  background-color: #000;
 }
