@@ -125,6 +125,12 @@ def get_guidelines(country: str) -> dict:
   return guidelines_result
 
 
+def get_all(info):
+  it = get_itinerary(info)
+  gl = get_guidelines({"country": info["country_of_origin"]})
+  return it, gl
+
+
 if __name__ == "__main__":
   itinerary = get_itinerary({
       "full_name": "Sohil" + "Ansari",
