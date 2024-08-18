@@ -1,7 +1,6 @@
 from fastapi import FastAPI, HTTPException, Request, Form
 from pydantic import ValidationError
 from llm import get_all
-from custom_error import DuplicateError
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
